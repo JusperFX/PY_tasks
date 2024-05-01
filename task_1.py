@@ -10,11 +10,18 @@ Output: 120
 num = 5
 f = 1
 
-while num > 1:
-    f *= num #умножение и присваивание
-    num -= 1
-print(f)
+# while num > 1:
+#     f *= num #умножение и присваивание
+#     num -= 1
+# print(f)
 
-for elem in range(1, num + 1):
-    f *= elem
-print(f)
+# for elem in range(1, num + 1):
+#     f *= elem
+# print(f)
+
+def factorial(num, f=1):
+    if num == 0:
+        return f
+    return factorial(num - 1, f*num)
+
+print(factorial(num))
